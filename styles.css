@@ -1,0 +1,258 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+
+@font-face {
+  font-family: "roboto-regular";
+  src: url("./assets/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "roboto-bold";
+  src: url("./assets/fonts/Roboto-Bold.ttf");
+}
+
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --light-tomato: hsl(4, 100%, 80%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+  --gradient-pink: #ff3e83;
+  --gradient-orange: #fd634a;
+}
+
+/* COMPONENTS */
+
+body {
+  background-color: var(--white);
+}
+
+/* SIGNUP FORM */
+
+main.sign-up-form {
+  display: flex;
+  flex-direction: column-reverse;
+  min-height: 100vh;
+  justify-content: flex-end;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+section.product-img {
+  width: 100%;
+}
+
+section.product-img img {
+  width: 100%;
+}
+
+.product-info h1 {
+  color: var(--dark-slate-grey);
+  font-family: "roboto-bold";
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.product-msg {
+  color: var(--grey);
+  font-family: "robot-regular";
+  margin: 1rem 0;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+ul li img {
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+ul li {
+  color: var(--dark-slate-grey);
+  font-family: "roboto-regular";
+}
+
+form {
+  margin: 1rem 0;
+}
+
+form .label {
+  display: flex;
+  justify-content: space-between;
+}
+
+form label.email-address {
+  display: inline-block;
+  color: var(--dark-slate-grey);
+  font-family: "roboto-bold";
+  margin-bottom: 0.8rem;
+}
+
+form input {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border-width: 1px;
+  outline: none;
+  color: var(--dark-slate-grey);
+  font-family: "roboto-regular";
+  padding: 1rem;
+}
+
+.sign-up-form button {
+  margin: 1rem 0;
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: var(--white);
+  font-family: "roboto-bold";
+  background-color: var(--dark-slate-grey);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sign-up-form button:hover {
+  background: linear-gradient(
+    90deg,
+    var(--gradient-pink),
+    var(--gradient-orange)
+  );
+}
+
+/* THANK YOU MESSAGE */
+
+main.success-msg {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+main.success-msg img {
+  max-width: 80px;
+  margin: 1rem 0;
+}
+
+main.success-msg h1 {
+  color: var(--dark-slate-grey);
+  font-family: "roboto-bold";
+  margin: 1rem 0;
+  font-size: 2.5rem;
+}
+
+main.success-msg p {
+  color: var(--dark-slate-grey);
+  font-family: "roboto-regular";
+  line-height: 1.5rem;
+  margin: 1rem 0;
+  font: bold;
+}
+
+main.success-msg button {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  color: var(--white);
+  background-color: var(--dark-slate-grey);
+  font-family: "roboto-bold";
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+main.success-msg button:hover {
+  background: linear-gradient(
+    90deg,
+    var(--gradient-pink),
+    var(--gradient-orange)
+  );
+}
+
+/* TOGGLE */
+
+main.hidden {
+  display: none;
+}
+
+form .error-validation {
+  display: inline;
+  color: var(--tomato);
+  font-family: "roboto-regular";
+  font-size: 1rem;
+}
+
+.error-msg {
+  border-color: var(--tomato);
+  background-color: var(--light-tomato);
+  color: red;
+}
+
+input .error-msg::placeholder {
+  color: red;
+}
+
+@media (min-width: 980px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--charcoal-grey);
+  }
+
+  main.sign-up-form {
+    flex-direction: row;
+    max-width: 800px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    min-height: 50vh;
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+
+  section.product-info {
+    flex: 1;
+  }
+
+  section.product-img {
+    max-width: 100%;
+    flex: 1;
+  }
+
+  main.success-msg {
+    min-height: 40vh;
+    max-width: 400px;
+    background-color: var(--white);
+    border-radius: 20px;
+  }
+}
+
+/* FOOTER */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

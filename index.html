@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Sign-up form start -->
+    <main class="sign-up-form">
+      <section class="product-info">
+        <h1>Stay updated!</h1>
+        <p class="product-msg">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ul>
+          <li>
+            <img src="./assets/images/icon-list.svg" alt="" />Product discovery
+            and building what matters
+          </li>
+          <li>
+            <img src="./assets/images/icon-list.svg" alt="" />Measuring to
+            ensure updates are a success
+          </li>
+          <li>
+            <img src="./assets/images/icon-list.svg" alt="" />And much more!
+          </li>
+        </ul>
+        <form action="">
+          <div class="label">
+            <label for="email" class="email-address">Email address</label>
+            <span class="error-validation"></span>
+          </div>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="email@company.com"
+            required
+          />
+        </form>
+        <button>Subscribe to monthly newsletter</button>
+      </section>
+      <section class="product-img">
+        <picture>
+          <!-- Source with media query -->
+          <source
+            media="(max-width: 980px)"
+            srcset="./assets/images/illustration-sign-up-mobile.svg"
+          />
+
+          <!-- Fallback image for browsers that do not support <picture> or any <source> elements -->
+          <img
+            src="./assets/images/illustration-sign-up-desktop.svg"
+            alt="Description of the image"
+          />
+        </picture>
+      </section>
+    </main>
+    <!-- Sign-up form end -->
+
+    <!-- Success message start -->
+    <main class="success-msg hidden">
+      <div>
+        <img src="./assets/images/icon-success.svg" alt="" />
+        <h1>Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to <span></span>. Please open it
+          and click the button inside to confirm your subscription.
+        </p>
+      </div>
+      <button>Dismiss message</button>
+    </main>
+    <!-- Success message end -->
+
+    <script src="index.js" charset="UTF-8"></script>
+  </body>
+  <!-- <footer>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer> -->
+</html>
